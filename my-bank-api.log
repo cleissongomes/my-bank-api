@@ -1,0 +1,17 @@
+2024-03-28T18:32:39.577Z [my-bank-api] info: API Started!
+2024-03-28T18:38:56.499Z [my-bank-api] info: API Started!
+2024-03-28T18:39:27.841Z [my-bank-api] info: API Started!
+2024-03-28T18:40:02.661Z [my-bank-api] info: API Started!
+2024-03-28T18:40:25.105Z [my-bank-api] info: API Started!
+2024-03-28T18:46:43.276Z [my-bank-api] info: API Started!
+2024-03-28T18:47:21.574Z [my-bank-api] error: GET /account - Unexpected end of JSON input
+2024-03-28T18:48:56.609Z [my-bank-api] info: API Started!
+2024-03-28T18:49:42.231Z [my-bank-api] info: API Started!
+2024-03-28T18:50:59.185Z [my-bank-api] info: API Started!
+2024-03-28T18:51:21.459Z [my-bank-api] info: API Started!
+2024-03-28T18:51:28.576Z [my-bank-api] info: API Started!
+2024-03-28T18:51:54.391Z [my-bank-api] info: API Started!
+2024-03-28T18:52:37.807Z [my-bank-api] info: API Started!
+2024-03-28T18:52:58.795Z [my-bank-api] info: POST /account - {"id":5,"name":"Cleisson Gomes","Balance":200}
+2024-03-28T18:53:02.551Z [my-bank-api] info: GET /account
+2024-03-28T18:53:40.347Z [my-bank-api] info: GET /account/:id

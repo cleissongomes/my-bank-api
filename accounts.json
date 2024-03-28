@@ -1,1 +1,15 @@
-{"nextId":5,"accounts":[{"id":1,"name":"Cleisson Gomes","Balance":200}]}
+{
+  "nextId": 6,
+  "accounts": [
+    {
+      "id": 1,
+      "name": "Cleisson Gomes",
+      "Balance": 200
+    },
+    {
+      "id": 5,
+      "name": "Cleisson Gomes",
+      "Balance": 200
+    }
+  ]
+}
