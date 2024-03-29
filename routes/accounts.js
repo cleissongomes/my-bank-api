@@ -1,3 +1,4 @@
+import { log } from 'console';
 import express from 'express';
 const router = express.Router();
 import { promises as fs } from 'fs';
@@ -7,9 +8,18 @@ const { readFile, writeFile } = fs;
 router.post('/', async (req, res, next) => {
   try {
     let account = req.body;
+
+    if (!account.name || !account.balance == null) {
+      throw new Error('Name e Balance são obrigatórios.');
+    }
+
     const data = JSON.parse(await readFile(global.fileName));
 
-    account = { id: data.nextId++, ...account };
+    account = {
+      id: data.nextId++,
+      name: account.name,
+      balance: account.balance,
+    };
     data.accounts.push(account);
 
     await writeFile(global.fileName, JSON.stringify(data, null, 2));
@@ -64,10 +74,21 @@ router.put('/', async (req, res, next) => {
   try {
     let account = req.body;
 
+    if (!account.name || !account.balance == null) {
+      throw new Error('Name e Balance são obrigatórios.');
+    }
+
     const data = JSON.parse(await readFile(global.fileName));
     const index = data.accounts.findIndex(a => a.id === parseInt(account.id));
 
-    data.accounts[index] = account;
+    if (index === -1) {
+      throw new Error('Registro não encontrado.');
+    }
+
+    console.log(index);
+
+    data.accounts[index].name = account.name;
+    data.accounts[index].balance = account.balance;
 
     await writeFile(global.fileName, JSON.stringify(data, null, 2));
     res.send(account);
@@ -79,10 +100,18 @@ router.put('/', async (req, res, next) => {
 
 router.patch('/updateBalance', async (req, res, next) => {
   try {
-    let account = req.body;
+    const account = req.body;
 
     const data = JSON.parse(await readFile(global.fileName));
     const index = data.accounts.findIndex(a => a.id === parseInt(account.id));
+
+    if (!account.id || !account.balance == null) {
+      throw new Error('Id e Balance são obrigatórios.');
+    }
+
+    if (index === -1) {
+      throw new Error('Registro não encontrado.');
+    }
 
     data.accounts[index].balance = account.balance;
 

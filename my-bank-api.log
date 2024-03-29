@@ -15,3 +15,41 @@
 2024-03-28T18:52:58.795Z [my-bank-api] info: POST /account - {"id":5,"name":"Cleisson Gomes","Balance":200}
 2024-03-28T18:53:02.551Z [my-bank-api] info: GET /account
 2024-03-28T18:53:40.347Z [my-bank-api] info: GET /account/:id
+2024-03-29T21:10:20.931Z [my-bank-api] info: API Started!
+2024-03-29T21:31:18.796Z [my-bank-api] info: API Started!
+2024-03-29T21:31:40.508Z [my-bank-api] info: API Started!
+2024-03-29T21:32:19.852Z [my-bank-api] info: API Started!
+2024-03-29T21:33:28.513Z [my-bank-api] error: POST /account - Name e Balance são obrigatórios.
+2024-03-29T21:34:06.285Z [my-bank-api] error: POST /account - Name e Balance são obrigatórios.
+2024-03-29T21:34:16.068Z [my-bank-api] info: API Started!
+2024-03-29T21:34:18.376Z [my-bank-api] error: POST /account - Name e Balance são obrigatórios.
+2024-03-29T21:34:51.995Z [my-bank-api] info: API Started!
+2024-03-29T21:35:29.641Z [my-bank-api] error: POST /account - Name e Balance são obrigatórios.
+2024-03-29T21:36:12.110Z [my-bank-api] info: API Started!
+2024-03-29T21:36:56.263Z [my-bank-api] info: API Started!
+2024-03-29T21:37:17.601Z [my-bank-api] info: POST /account - {"id":6,"name":"José Silva","balance":200}
+2024-03-29T21:37:21.808Z [my-bank-api] info: GET /account
+2024-03-29T21:40:58.451Z [my-bank-api] info: API Started!
+2024-03-29T21:43:49.993Z [my-bank-api] info: API Started!
+2024-03-29T21:43:52.118Z [my-bank-api] info: POST /account - {"id":7,"name":"José Silva","balance":200}
+2024-03-29T21:46:32.245Z [my-bank-api] info: API Started!
+2024-03-29T21:48:03.390Z [my-bank-api] info: API Started!
+2024-03-29T21:48:15.794Z [my-bank-api] info: API Started!
+2024-03-29T21:48:23.209Z [my-bank-api] info: API Started!
+2024-03-29T21:48:46.580Z [my-bank-api] info: API Started!
+2024-03-29T21:49:51.702Z [my-bank-api] info: API Started!
+2024-03-29T21:50:16.862Z [my-bank-api] info: API Started!
+2024-03-29T21:50:43.105Z [my-bank-api] info: API Started!
+2024-03-29T22:07:11.647Z [my-bank-api] info: POST /account - {"id":8,"name":"José Silva","balance":200}
+2024-03-29T22:16:51.017Z [my-bank-api] info: API Started!
+2024-03-29T22:17:12.061Z [my-bank-api] error: PATCH /account - Registro não encontrado.
+2024-03-29T22:17:19.636Z [my-bank-api] error: PUT /account - Registro não encontrado.
+2024-03-29T22:17:26.384Z [my-bank-api] info: PUT /account - {"id":1,"name":"Cleisson Gomes","Balance":200}
+2024-03-29T22:17:34.958Z [my-bank-api] info: PATCH /account - {"id":1,"Balance":300}
+2024-03-29T22:23:37.753Z [my-bank-api] info: API Started!
+2024-03-29T22:24:09.098Z [my-bank-api] info: API Started!
+2024-03-29T22:24:23.793Z [my-bank-api] info: API Started!
+2024-03-29T22:24:43.102Z [my-bank-api] info: API Started!
+2024-03-29T22:24:56.868Z [my-bank-api] info: API Started!
+2024-03-29T22:25:02.412Z [my-bank-api] error: PATCH /account - Id e Balance são obrigatórios.
+2024-03-29T22:25:06.819Z [my-bank-api] info: PATCH /account - {"id":1,"Balance":300}
