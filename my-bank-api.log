@@ -56,3 +56,12 @@
 2024-03-29T22:50:27.348Z [my-bank-api] info: API Started!
 2024-04-01T11:58:16.453Z [my-bank-api] info: API Started!
 2024-04-01T12:16:41.108Z [my-bank-api] info: API Started!
+2024-04-01T12:56:36.290Z [my-bank-api] info: API Started!
+2024-04-01T12:58:21.165Z [my-bank-api] info: API Started!
+2024-04-01T13:06:45.363Z [my-bank-api] info: API Started!
+2024-04-01T13:07:19.068Z [my-bank-api] info: GET /account
+2024-04-01T13:08:24.175Z [my-bank-api] info: API Started!
+2024-04-01T13:16:03.958Z [my-bank-api] info: GET /account
+2024-04-01T13:16:55.014Z [my-bank-api] info: POST /account - {"id":9,"name":"Cleisson Gomes","balance":200}
+2024-04-01T13:18:38.608Z [my-bank-api] info: POST /account - {"id":10,"name":"Nome da Documentação","balance":2050}
+2024-04-01T13:19:09.712Z [my-bank-api] info: GET /account
