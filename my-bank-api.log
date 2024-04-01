@@ -53,3 +53,6 @@
 2024-03-29T22:24:56.868Z [my-bank-api] info: API Started!
 2024-03-29T22:25:02.412Z [my-bank-api] error: PATCH /account - Id e Balance são obrigatórios.
 2024-03-29T22:25:06.819Z [my-bank-api] info: PATCH /account - {"id":1,"Balance":300}
+2024-03-29T22:50:27.348Z [my-bank-api] info: API Started!
+2024-04-01T11:58:16.453Z [my-bank-api] info: API Started!
+2024-04-01T12:16:41.108Z [my-bank-api] info: API Started!
