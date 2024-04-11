@@ -1,11 +1,7 @@
-import { log } from 'console';
-import express from 'express';
-const router = express.Router();
 import { promises as fs } from 'fs';
-
 const { readFile, writeFile } = fs;
 
-router.post('/', async (req, res, next) => {
+async function createAccount(req, res, next) {
   try {
     let account = req.body;
 
@@ -30,9 +26,9 @@ router.post('/', async (req, res, next) => {
   } catch (err) {
     next(err);
   }
-});
+}
 
-router.get('/', async (req, res, next) => {
+async function getAccounts(req, res, next) {
   try {
     const data = JSON.parse(await readFile(global.fileName));
     delete data.nextId;
@@ -41,9 +37,9 @@ router.get('/', async (req, res, next) => {
   } catch (err) {
     next(err);
   }
-});
+}
 
-router.get('/:id', async (req, res, next) => {
+async function getAccount(req, res, next) {
   try {
     const data = JSON.parse(await readFile(global.fileName));
     const account = data.accounts.find(
@@ -54,9 +50,9 @@ router.get('/:id', async (req, res, next) => {
   } catch (err) {
     next(err);
   }
-});
+}
 
-router.delete('/:id', async (req, res, next) => {
+async function deleteAccount(req, res, next) {
   try {
     const data = JSON.parse(await readFile(global.fileName));
     data.accounts = data.accounts.filter(
@@ -68,9 +64,9 @@ router.delete('/:id', async (req, res, next) => {
   } catch (err) {
     next(err);
   }
-});
+}
 
-router.put('/', async (req, res, next) => {
+async function updateAccount(req, res, next) {
   try {
     let account = req.body;
 
@@ -96,9 +92,9 @@ router.put('/', async (req, res, next) => {
   } catch (err) {
     next(err);
   }
-});
+}
 
-router.patch('/updateBalance', async (req, res, next) => {
+async function updateBalance(req, res, next) {
   try {
     const account = req.body;
 
@@ -122,12 +118,13 @@ router.patch('/updateBalance', async (req, res, next) => {
   } catch (err) {
     next(err);
   }
-});
+}
 
-router.use((err, req, res, next) => {
-  global.logger.error(`${req.method} ${req.baseUrl} - ${err.message}`);
-  console.log(err);
-  res.status(400).send({ error: err.message });
-});
-
-export default router;
+export default {
+  createAccount,
+  getAccounts,
+  getAccount,
+  deleteAccount,
+  updateAccount,
+  updateBalance,
+};
