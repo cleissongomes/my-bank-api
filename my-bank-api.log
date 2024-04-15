@@ -114,3 +114,6 @@
 2024-04-11T13:28:51.437Z [my-bank-api] info: GET /account
 2024-04-11T13:29:12.445Z [my-bank-api] info: PATCH /account - {"id":10,"balance":300}
 2024-04-11T13:29:16.247Z [my-bank-api] info: GET /account
+2024-04-15T13:11:52.911Z [my-bank-api] info: API Started!
+2024-04-15T13:12:16.785Z [my-bank-api] info: API Started!
+2024-04-15T13:12:34.790Z [my-bank-api] info: API Started!

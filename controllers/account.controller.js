@@ -1,27 +1,15 @@
 import { promises as fs } from 'fs';
+import AccountService from '../services/account.service.js';
 const { readFile, writeFile } = fs;
 
 async function createAccount(req, res, next) {
   try {
     let account = req.body;
-
     if (!account.name || !account.balance == null) {
       throw new Error('Name e Balance são obrigatórios.');
     }
-
-    const data = JSON.parse(await readFile(global.fileName));
-
-    account = {
-      id: data.nextId++,
-      name: account.name,
-      balance: account.balance,
-    };
-    data.accounts.push(account);
-
-    await writeFile(global.fileName, JSON.stringify(data, null, 2));
-
+    account = await AccountService.createAccount(account);
     res.send(account);
-
     logger.info(`POST /account - ${JSON.stringify(account)}`);
   } catch (err) {
     next(err);
