@@ -187,3 +187,37 @@
 2024-04-23T12:39:26.613Z [my-bank-api] info: API Started!
 2024-04-23T12:39:33.374Z [my-bank-api] info: PUT /account - {"id":10,"name":"Cleisson Gomes","balance":3350}
 2024-04-23T12:39:40.261Z [my-bank-api] info: PATCH /account - {"id":10,"balance":400}
+2024-04-23T12:54:08.707Z [my-bank-api] info: API Started!
+2024-04-23T12:54:23.121Z [my-bank-api] info: API Started!
+2024-04-23T12:54:36.932Z [my-bank-api] info: API Started!
+2024-04-23T12:55:59.706Z [my-bank-api] info: API Started!
+2024-04-23T12:57:45.915Z [my-bank-api] info: API Started!
+2024-04-23T13:11:10.328Z [my-bank-api] info: API Started!
+2024-04-23T13:11:15.694Z [my-bank-api] info: POST /account - {"id":15,"name":"José Gomes","balance":2000}
+2024-04-23T13:11:25.456Z [my-bank-api] info: API Started!
+2024-04-23T13:12:24.249Z [my-bank-api] info: API Started!
+2024-04-23T13:13:15.848Z [my-bank-api] info: API Started!
+2024-04-23T13:13:18.834Z [my-bank-api] error: GET /account - accounts is not defined
+2024-04-23T13:13:26.036Z [my-bank-api] info: API Started!
+2024-04-23T13:13:29.396Z [my-bank-api] info: GET /account
+2024-04-23T13:14:33.778Z [my-bank-api] info: API Started!
+2024-04-23T13:15:41.179Z [my-bank-api] info: API Started!
+2024-04-23T13:15:47.249Z [my-bank-api] info: API Started!
+2024-04-23T13:17:26.500Z [my-bank-api] info: API Started!
+2024-04-23T13:17:47.447Z [my-bank-api] info: API Started!
+2024-04-23T13:17:53.462Z [my-bank-api] info: API Started!
+2024-04-23T13:17:57.545Z [my-bank-api] info: API Started!
+2024-04-23T13:18:41.614Z [my-bank-api] info: API Started!
+2024-04-23T13:19:12.404Z [my-bank-api] info: API Started!
+2024-04-23T13:21:24.988Z [my-bank-api] info: API Started!
+2024-04-23T13:22:39.546Z [my-bank-api] info: API Started!
+2024-04-23T13:23:17.175Z [my-bank-api] info: GET /account
+2024-04-23T13:23:23.168Z [my-bank-api] info: DELETE /account/:id - 14
+2024-04-23T13:23:27.389Z [my-bank-api] info: DELETE /account/:id - 15
+2024-04-23T13:23:30.577Z [my-bank-api] info: GET /account
+2024-04-23T13:23:38.238Z [my-bank-api] info: DELETE /account/:id - 11
+2024-04-23T13:23:40.918Z [my-bank-api] info: GET /account
+2024-04-23T13:23:49.991Z [my-bank-api] info: PUT /account - {"id":10,"name":"Cleisson Gomes","balance":400}
+2024-04-23T13:23:52.834Z [my-bank-api] info: GET /account
+2024-04-23T13:24:05.243Z [my-bank-api] info: PATCH /account - {"id":10,"balance":256}
+2024-04-23T13:24:08.168Z [my-bank-api] info: GET /account
