@@ -17,6 +17,52 @@ async function createAccount(account) {
   return account;
 }
 
+async function getAccounts() {
+  const data = JSON.parse(await readFile(global.fileName));
+  delete data.nextId;
+  return data;
+}
+
+async function getAccount(id) {
+  const data = JSON.parse(await readFile(global.fileName));
+  const account = data.accounts.find(account => account.id === parseInt(id));
+  return account;
+}
+
+async function deleteAccount(id) {
+  const data = JSON.parse(await readFile(global.fileName));
+  data.accounts = data.accounts.filter(account => account.id !== parseInt(id));
+  await writeFile(global.fileName, JSON.stringify(data));
+}
+
+async function updateAccount(account) {
+  const data = JSON.parse(await readFile(global.fileName));
+  const index = data.accounts.findIndex(a => a.id === parseInt(account.id));
+  if (index === -1) {
+    throw new Error('Registro não encontrado.');
+  }
+  data.accounts[index].name = account.name;
+  data.accounts[index].balance = account.balance;
+  await writeFile(global.fileName, JSON.stringify(data, null, 2));
+  return data.accounts[index];
+}
+
+async function updateBalance(account) {
+  const data = JSON.parse(await readFile(global.fileName));
+  const index = data.accounts.findIndex(a => a.id === parseInt(account.id));
+  if (index === -1) {
+    throw new Error('Registro não encontrado.');
+  }
+  data.accounts[index].balance = account.balance;
+  await writeFile(global.fileName, JSON.stringify(data, null, 2));
+  return data.accounts[index];
+}
+
 export default {
   createAccount,
+  getAccounts,
+  getAccount,
+  deleteAccount,
+  updateAccount,
+  updateBalance,
 };

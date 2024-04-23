@@ -117,3 +117,73 @@
 2024-04-15T13:11:52.911Z [my-bank-api] info: API Started!
 2024-04-15T13:12:16.785Z [my-bank-api] info: API Started!
 2024-04-15T13:12:34.790Z [my-bank-api] info: API Started!
+2024-04-16T12:58:22.879Z [my-bank-api] info: API Started!
+2024-04-16T13:00:48.367Z [my-bank-api] info: API Started!
+2024-04-16T13:16:06.260Z [my-bank-api] info: API Started!
+2024-04-16T13:16:18.760Z [my-bank-api] info: API Started!
+2024-04-16T13:17:29.995Z [my-bank-api] info: API Started!
+2024-04-16T13:18:08.357Z [my-bank-api] info: API Started!
+2024-04-16T13:19:15.610Z [my-bank-api] info: API Started!
+2024-04-16T13:19:24.606Z [my-bank-api] info: POST /account - {"id":13,"name":"José Silva","balance":2000}
+2024-04-16T13:19:29.985Z [my-bank-api] error: GET /account - account is not defined
+2024-04-16T13:19:50.253Z [my-bank-api] error: GET /account - account is not defined
+2024-04-16T13:20:31.838Z [my-bank-api] info: API Started!
+2024-04-16T13:20:36.066Z [my-bank-api] info: GET /account
+2024-04-16T13:21:42.323Z [my-bank-api] info: API Started!
+2024-04-16T13:22:15.685Z [my-bank-api] info: API Started!
+2024-04-16T13:23:33.264Z [my-bank-api] info: API Started!
+2024-04-16T13:23:37.644Z [my-bank-api] info: GET /account
+2024-04-16T13:23:42.084Z [my-bank-api] error: GET /account - account is not defined
+2024-04-16T13:24:38.380Z [my-bank-api] info: API Started!
+2024-04-16T13:24:42.526Z [my-bank-api] error: GET /account - req is not defined
+2024-04-16T13:25:20.817Z [my-bank-api] info: API Started!
+2024-04-16T13:26:46.408Z [my-bank-api] info: API Started!
+2024-04-16T13:26:58.244Z [my-bank-api] info: API Started!
+2024-04-16T13:27:19.576Z [my-bank-api] info: GET /account/:id
+2024-04-16T13:27:59.919Z [my-bank-api] info: GET /account/:id
+2024-04-16T13:28:20.210Z [my-bank-api] info: GET /account/:id
+2024-04-16T13:29:37.578Z [my-bank-api] info: API Started!
+2024-04-16T13:29:39.336Z [my-bank-api] info: GET /account/:id
+2024-04-16T13:31:33.734Z [my-bank-api] info: API Started!
+2024-04-16T13:32:10.236Z [my-bank-api] info: API Started!
+2024-04-16T13:32:28.756Z [my-bank-api] info: API Started!
+2024-04-16T13:32:58.079Z [my-bank-api] info: API Started!
+2024-04-16T13:33:04.316Z [my-bank-api] info: API Started!
+2024-04-16T13:34:33.106Z [my-bank-api] info: DELETE /account/:id - 13
+2024-04-16T13:34:38.992Z [my-bank-api] info: GET /account
+2024-04-16T13:35:22.649Z [my-bank-api] info: API Started!
+2024-04-16T13:35:54.927Z [my-bank-api] info: API Started!
+2024-04-16T13:37:13.199Z [my-bank-api] info: API Started!
+2024-04-16T13:37:54.429Z [my-bank-api] info: API Started!
+2024-04-16T13:38:14.722Z [my-bank-api] info: API Started!
+2024-04-16T13:39:10.642Z [my-bank-api] info: API Started!
+2024-04-16T13:39:41.290Z [my-bank-api] info: API Started!
+2024-04-16T13:40:23.038Z [my-bank-api] info: API Started!
+2024-04-16T13:40:49.434Z [my-bank-api] info: API Started!
+2024-04-16T13:41:51.238Z [my-bank-api] info: API Started!
+2024-04-16T13:42:18.566Z [my-bank-api] info: API Started!
+2024-04-16T13:42:27.161Z [my-bank-api] info: API Started!
+2024-04-16T13:43:22.766Z [my-bank-api] info: API Started!
+2024-04-16T13:43:57.372Z [my-bank-api] info: API Started!
+2024-04-16T13:44:32.171Z [my-bank-api] info: API Started!
+2024-04-16T13:44:59.943Z [my-bank-api] error: PUT /account - Cannot read property '5' of undefined
+2024-04-16T13:45:50.797Z [my-bank-api] info: API Started!
+2024-04-16T13:45:58.857Z [my-bank-api] error: PUT /account - Cannot read property '5' of undefined
+2024-04-16T13:46:36.443Z [my-bank-api] info: API Started!
+2024-04-16T13:48:37.724Z [my-bank-api] error: PUT /account - Cannot read property '5' of undefined
+2024-04-16T13:49:50.513Z [my-bank-api] info: API Started!
+2024-04-16T13:49:54.856Z [my-bank-api] error: PUT /account - Cannot read property '5' of undefined
+2024-04-16T13:49:55.966Z [my-bank-api] error: PUT /account - Cannot read property '5' of undefined
+2024-04-16T13:50:03.824Z [my-bank-api] info: API Started!
+2024-04-16T13:51:06.545Z [my-bank-api] info: API Started!
+2024-04-16T13:51:07.994Z [my-bank-api] error: PUT /account - Cannot read property '5' of undefined
+2024-04-16T13:51:09.932Z [my-bank-api] error: PUT /account - Cannot read property '5' of undefined
+2024-04-23T12:35:56.344Z [my-bank-api] info: API Started!
+2024-04-23T12:36:37.988Z [my-bank-api] info: POST /account - {"id":14,"name":"José Silva","balance":2000}
+2024-04-23T12:36:42.308Z [my-bank-api] info: GET /account
+2024-04-23T12:36:47.613Z [my-bank-api] info: GET /account/:id
+2024-04-23T12:37:10.299Z [my-bank-api] error: PUT /account - Cannot read property '5' of undefined
+2024-04-23T12:37:21.963Z [my-bank-api] error: PUT /account - Cannot read property '5' of undefined
+2024-04-23T12:39:26.613Z [my-bank-api] info: API Started!
+2024-04-23T12:39:33.374Z [my-bank-api] info: PUT /account - {"id":10,"name":"Cleisson Gomes","balance":3350}
+2024-04-23T12:39:40.261Z [my-bank-api] info: PATCH /account - {"id":10,"balance":400}
