@@ -1,5 +1,3 @@
-import { promises as fs } from 'fs';
-const { readFile, writeFile } = fs;
 import AccountRepository from '../repositories/account.repository.js';
 
 async function createAccount(account) {
@@ -23,7 +21,9 @@ async function updateAccount(account) {
 }
 
 async function updateBalance(account) {
-  return await AccountRepository.updateBalance(account);
+  const acc = await AccountRepository.getAccount(account.id);
+  acc.balance = account.balance;
+  return await AccountRepository.updateAccount(acc);
 }
 
 export default {

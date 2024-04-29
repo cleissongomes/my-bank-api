@@ -221,3 +221,18 @@
 2024-04-23T13:23:52.834Z [my-bank-api] info: GET /account
 2024-04-23T13:24:05.243Z [my-bank-api] info: PATCH /account - {"id":10,"balance":256}
 2024-04-23T13:24:08.168Z [my-bank-api] info: GET /account
+2024-04-23T13:35:16.141Z [my-bank-api] info: API Started and File Created!
+2024-04-24T13:28:13.781Z [my-bank-api] info: API Started!
+2024-04-24T13:29:18.873Z [my-bank-api] info: API Started!
+2024-04-24T13:29:44.865Z [my-bank-api] info: API Started!
+2024-04-24T13:30:09.013Z [my-bank-api] info: API Started!
+2024-04-24T13:31:11.009Z [my-bank-api] info: API Started!
+2024-04-24T13:33:56.577Z [my-bank-api] error: PATCH /account - Registro não encontrado.
+2024-04-24T13:34:02.542Z [my-bank-api] info: GET /account
+2024-04-24T13:34:08.647Z [my-bank-api] info: POST /account - {"id":1,"name":"José Gomes","balance":2000}
+2024-04-24T13:34:12.561Z [my-bank-api] info: GET /account
+2024-04-24T13:34:20.708Z [my-bank-api] info: PATCH /account - {"id":1,"balance":2320}
+2024-04-24T13:34:30.477Z [my-bank-api] info: GET /account
+2024-04-24T13:36:05.402Z [my-bank-api] info: API Started!
+2024-04-24T13:36:21.378Z [my-bank-api] info: PATCH /account - {"id":1,"balance":2300}
+2024-04-29T13:09:25.919Z [my-bank-api] info: API Started!
