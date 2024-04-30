@@ -5,7 +5,11 @@ import accountsRouter from './routes/account.routes.js';
 import { promises as fs } from 'fs';
 import swaggerUi from 'swagger-ui-express';
 import { swaggerDocument } from './doc.js';
+import pkg from 'graphql';
+import { graphqlHTTP } from 'express-graphql';
+import AccountService from './services/account.service.js';
 
+const { buildSchema } = pkg;
 const { readFile, writeFile } = fs;
 
 global.fileName = 'accounts.json';
@@ -23,12 +27,40 @@ global.logger = winston.createLogger({
   format: combine(label({ label: 'my-bank-api' }), timestamp(), myFormat),
 });
 
+const schema = buildSchema(`
+    type Account {
+        id: Int
+        name: String
+        balance: Float
+    } 
+    type Query {
+      getAccounts: [Account]
+      getAccount(id: Int): Account
+    }
+`);
+
+const root = {
+  getAccounts: () => AccountService.getAccounts(),
+  getAccount(args) {
+    return AccountService.getAccount(args.id);
+  },
+};
+
 const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(express.static('public'));
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use('/account', accountsRouter);
+
+app.use(
+  '/graphql',
+  graphqlHTTP({
+    schema: schema,
+    rootValue: root,
+    graphiql: true,
+  })
+);
 
 app.listen(3000, async () => {
   try {
