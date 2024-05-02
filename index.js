@@ -7,7 +7,8 @@ import swaggerUi from 'swagger-ui-express';
 import { swaggerDocument } from './doc.js';
 import pkg from 'graphql';
 import { graphqlHTTP } from 'express-graphql';
-import AccountService from './services/account.service.js';
+//import AccountService from './services/account.service.js';
+import Schema from './schema/index.js';
 
 const { buildSchema } = pkg;
 const { readFile, writeFile } = fs;
@@ -27,7 +28,7 @@ global.logger = winston.createLogger({
   format: combine(label({ label: 'my-bank-api' }), timestamp(), myFormat),
 });
 
-const schema = buildSchema(`
+/*const schema = buildSchema(`
     type Account {
         id: Int
         name: String
@@ -63,7 +64,7 @@ const root = {
   updateAccount({ account }) {
     return AccountService.updateAccount(account);
   },
-};
+};*/
 
 const app = express();
 app.use(express.json());
@@ -75,8 +76,8 @@ app.use('/account', accountsRouter);
 app.use(
   '/graphql',
   graphqlHTTP({
-    schema: schema,
-    rootValue: root,
+    schema: Schema,
+    //rootValue: root,
     graphiql: true,
   })
 );
