@@ -1,10 +1,25 @@
 {
-  "nextId": 2,
+  "nextId": 6,
   "accounts": [
     {
       "id": 1,
       "name": "José Gomes",
       "balance": 2300
+    },
+    {
+      "id": 2,
+      "name": "Cleisson Gomes",
+      "balance": 450
+    },
+    {
+      "id": 3,
+      "name": "Cleisson Silva",
+      "balance": 850
+    },
+    {
+      "id": 5,
+      "name": "Cleisson Gomes",
+      "balance": 450
     }
   ]
 }
