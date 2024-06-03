@@ -1,9 +1,5 @@
-import {
-  GraphQLInputObjectType,
-  GraphQLString,
-  GraphQLInt,
-  GraphQLFloat,
-} from 'graphql';
+import pkg from 'graphql';
+const { GraphQLInputObjectType, GraphQLString, GraphQLInt, GraphQLFloat } = pkg;
 
 const AccountInput = new GraphQLInputObjectType({
   name: 'AccountInput',

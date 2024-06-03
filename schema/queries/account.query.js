@@ -1,6 +1,7 @@
-import { GraphQLInt, GraphQLList } from 'graphql';
+import pkg from 'graphql';
+const { GraphQLInt, GraphQLList } = pkg;
 import Account from '../types/Account.js';
-import AccountService from '../../services/account.service';
+import AccountService from '../../services/account.service.js';
 
 const accountQueries = {
   getAccounts: {

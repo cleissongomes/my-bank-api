@@ -1,4 +1,6 @@
-import { GraphQLSchema, GraphQLObjectType } from 'graphql';
+import pkg from 'graphql';
+const { GraphQLSchema, GraphQLObjectType } = pkg;
+
 import AccountQuery from './queries/account.query.js';
 import AccountMutation from './mutations/account.mutation.js';
 

@@ -1,9 +1,5 @@
-import {
-  GraphQLObjectType,
-  GraphQLString,
-  GraphQLInt,
-  GraphQLFloat,
-} from 'graphql';
+import pkg from 'graphql';
+const { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLFloat } = pkg;
 
 const Account = new GraphQLObjectType({
   name: 'Account',
