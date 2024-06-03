@@ -9,6 +9,7 @@ import pkg from 'graphql';
 import { graphqlHTTP } from 'express-graphql';
 //import AccountService from './services/account.service.js';
 import Schema from './schema/index.js';
+import basicAuth from 'express-basic-auth';
 
 const { buildSchema } = pkg;
 const { readFile, writeFile } = fs;
@@ -34,7 +35,45 @@ app.use(cors());
 app.use(express.static('public'));
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-app.use('/account', accountsRouter);
+function getRole(username) {
+  if (username == 'admin') {
+    return 'admin';
+  } else if (username == 'cleisson') return 'role1';
+}
+
+function authorize(...allowed) {
+  const isAllowed = role => allowed.indexOf(role) > -1;
+  return (req, res, next) => {
+    if (req.auth.user) {
+      const role = getRole(req.auth.user);
+
+      if (isAllowed(role)) {
+        next();
+      } else {
+        res.status(401).send('Role not allowed');
+      }
+    } else {
+      res.status(403).send('User not found');
+    }
+  };
+}
+
+app.use(
+  basicAuth({
+    authorizer: (username, password) => {
+      const userMatches = basicAuth.safeCompare(username, 'admin');
+      const pwdMatches = basicAuth.safeCompare(password, 'admin');
+
+      const user2Matches = basicAuth.safeCompare(username, 'cleisson');
+      const pwd2Matches = basicAuth.safeCompare(password, '1234');
+
+      return (userMatches && pwdMatches) || (user2Matches && pwd2Matches);
+    },
+  })
+);
+
+app.use('/account', authorize('admin'), accountsRouter);
+
 app.use(
   '/graphql',
   graphqlHTTP({
